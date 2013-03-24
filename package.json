@@ -1,12 +1,27 @@
 {
   "name": "objectpool",
   "version": "0.0.0",
+  "homepage": "https://github.com/miohtama/objectpool.js/",
   "description": "Object pool allocator for JavaScript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+
+  "devDependencies": {
+    "mocha": "~1.7.4"
+  },
+
+  "repository": "git@github.com:miohtama/objectpool.js.git",
   "author": "Mikko Ohtamaa <mikko@opensourcehacker.com>",
-  "license": "BSD"
+  "license": "BSD",
+
+ "testling": {
+    "browsers": [
+        "ie6", "ie7", "ie8", "ie9",
+        "firefox/15", "chrome/22", "opera/12", "safari/5.1"
+    ],
+    "harness" : "mocha",
+    "files": "test/*.js"
+  }
 }
