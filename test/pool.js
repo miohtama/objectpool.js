@@ -110,6 +110,7 @@ describe('pool', function () {
         }
 
         // Do flush in random order for little bit more stress
+        // Note: we are not very deterministic here
         shuffle(myobjects);
 
         // Flush pool
