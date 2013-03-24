@@ -99,9 +99,10 @@ If you use the code on in the browser you need to use it like:
     browserify=node_modules/browserify/bin/cmd.js
     $browserify examples/example.js -o examples/example.bundle.js
 
-And open resulting HTML + JS bundle for testing:
+And open resulting HTML + JS bundle for testing ([See example client-side JavaScript code](https://github.com/miohtama/objectpool.js/blob/master/examples/example.js)):
 
     open examples/example.html
+
 
 To use a local copy for the development do:
 
