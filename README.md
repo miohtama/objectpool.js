@@ -93,6 +93,16 @@ You should get this code simply by:
 
     npm install objectbool
 
+If you use the code on in the browser you need to use it like:
+
+    npm install browserify
+    browserify=node_modules/browserify/bin/cmd.js
+    $browserify examples/example.js -o examples/example.bundle.js
+
+And open resulting HTML + JS bundle for testing:
+
+    open examples/example.html
+
 To use a local copy for the development do:
 
     git submodule add git://github.com/miohtama/objectpool.js.git external/objectpool.js
