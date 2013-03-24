@@ -4,6 +4,8 @@ This is a simple object pool for Javascript. It is intended to speed up real-tim
 
 If you are unsure what object pooling is and why it is necessary when writing high performance real-time JavaScript please see *Background* section.
 
+[![browser support](http://ci.testling.com/miohtama/objectpool.js.png)](http://ci.testling.com/miohtama/objectpool.js)
+
 # Benefits
 
 * Pure Javascript
@@ -97,12 +99,14 @@ To use a local copy for the development do:
     git submodule init
     npm install external/objectpool.js
 
-# Running tests
+# Testing
 
-Example:
+To run testse:
 
     npm install mocha
     node_modules/mocha/bin/mocha
+
+[See continuos integration status on testling.com](https://ci.testling.com/miohtama/objectpool.js)
 
 # Limitations
 
