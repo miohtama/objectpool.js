@@ -14,7 +14,7 @@
 
   "repository": "git@github.com:miohtama/objectpool.js.git",
   "author": "Mikko Ohtamaa <mikko@opensourcehacker.com>",
-  "license": "BSD",
+  "license": "MIT",
 
  "testling": {
     "browsers": [
