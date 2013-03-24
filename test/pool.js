@@ -97,6 +97,23 @@ describe('pool', function () {
     });
 
 
+    it('should reset the discarded object state', function (done) {
+
+        var pool = new Pool(TestObjectAllocator, TestObjectReset);
+
+        var object = pool.create();
+        assert.equal(object.poolIndex, 0);
+        object.x = "foobar";
+        pool.discard(0);
+
+        // Assume we get the object recycled
+        object = pool.create();
+        assert.equal(object.poolIndex, 0);
+        assert.equal(object.x, undefined);
+
+        done();
+    });
+
     it('should grow and discard gracefully', function (done) {
 
         var pool = new Pool(TestObjectAllocator, TestObjectReset);

@@ -22,12 +22,13 @@ If you are unsure what object pooling is and why it is necessary when writing hi
 
 ## Creating pool
 
-Allocated objects do not need to have any special properties or features.
+Pooled objects do not need to have any special properties or features.
 
 Pool is created by giving it two fuction parameters *allocator()* and *resetor(index, object)*.
-*allocator()* will create new objects. You can simply give a JavaScript constructor which does not take parameters,
-or a function which calls constructor with default parameters. *resetor()* is called every time pool object is reused
-and it is responsible to reset the object state.
+*allocator()* will create new objects. You can give a JavaScript function which does `return new MyObject()`,
+or a function which calls constructor with default parameters. *resetor()* is called every time pool object is (re)used
+and it is responsible to reset the object state. *resetor()* can also do internal bookkeeping to keep track
+which object belongs to which pool index.
 
 Example:
 
@@ -85,13 +86,13 @@ To see the number of the live objects in pool you can query length property.
 
 [File issues on Github](https://github.com/miohtama/objectpool.js/)
 
-# Packing
+# Packaging and distribution
 
 The module is packed as NPM module and available for browser side consumption via [Browserify](http://browserify.org/)
 
 You should get this code simply by:
 
-    npm install objectbool
+    npm install objectpool
 
 If you use the code on in the browser you need to use it like:
 
@@ -102,7 +103,6 @@ If you use the code on in the browser you need to use it like:
 And open resulting HTML + JS bundle for testing ([See example client-side JavaScript code](https://github.com/miohtama/objectpool.js/blob/master/examples/example.js)):
 
     open examples/example.html
-
 
 To use a local copy for the development do:
 
