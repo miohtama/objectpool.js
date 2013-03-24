@@ -38,7 +38,8 @@ describe('pool', function () {
         obj.x = undefined;
         obj.y = undefined;
 
-        // Our object knows its own index so it can be freed from pool directly
+        // We store object index in pool on the object itself,
+        // so we can use this index to free object from the pool.
         // However, doing this adds an extra reference on the object
         // which you might want to eliminate when dealing with very large pools of small objects
         obj.poolIndex = index;
