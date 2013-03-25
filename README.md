@@ -112,12 +112,12 @@ To use a local copy for the development do:
 
 # Testing
 
-To run testse:
+To run tests:
 
     npm install mocha
     node_modules/mocha/bin/mocha
 
-[See continuos integration status on testling.com](https://ci.testling.com/miohtama/objectpool.js)
+[See continuous integration status on testling.com](https://ci.testling.com/miohtama/objectpool.js)
 
 # Limitations
 
