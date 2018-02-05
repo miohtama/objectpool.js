@@ -14,7 +14,7 @@ If you are unsure what object pooling is and why it is necessary when writing hi
 
 * Packed for distribution, both client-side ([Browserify](http://browserify.org/)) and NodeJS (npm)
 
-* Unit tests with [Mocha](http://visionmedia.github.com/mocha/)
+* Unit tests with [Mocha](http://mochajs.org/)
 
 * [Support and patches on GitHub](https://github.com/miohtama/objectpool.js)
 
